@@ -1,0 +1,129 @@
+body {
+    background-color: rgb(13, 13, 13);
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.profile {
+    padding: 5px;
+    font-size: xx-large;
+    margin: 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(181, 229, 255);
+}
+.nav-bar {
+    position: fixed;
+    right: 0;
+    background-color: rgb(35, 34, 34);
+    height: 100%;
+    top: 0;
+    width: 130px;
+    z-index: 100000;
+}
+.nav-bar ul {
+    margin-top: 200px;
+    list-style-type: none;
+    margin-left: -10px;
+}
+.nav-bar ul li {
+    margin-top: 25px;
+    font-size: large;
+}
+.nav-bar ul a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+.nav-bar ul a:hover {
+    text-decoration: none;
+    color: rgb(255, 152, 152);
+    font-weight: 600;
+}
+.videos {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-52%, -50%);
+    height: 550px;
+    width: 330px;
+    border: 1px grey solid;
+    border-radius: 20px;
+    overflow: auto;
+}
+.videos iframe, .videos img {
+    border-radius: 20px;
+    height: 550px;
+    width: 313px;
+    background-size: contain;
+}
+.bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(400%, -50%);
+}
+.bar button {
+    display: block;
+    margin-top: 15px;
+    font-size: large;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(29, 29, 29);
+}
+.bar button:hover {
+    background-color: rgb(45, 44, 44);
+}
+@media (max-width: 700px) {
+    .profile {
+        margin-top: 80px;
+        padding: 3px;
+    }
+    .videos {
+        margin-top: 30px;
+    }
+    .bar {
+        margin-top: 30px;
+    }
+    .nav-bar {
+        position: fixed;
+        right: 0;
+        background-color: rgb(35, 34, 34);
+        height: 8%;
+        top: 0;
+        width: 100%;
+    }
+    .nav-bar ul {
+        display: flex;
+        gap: 2.5rem;
+        margin-top: 1px;
+        margin-bottom: 8px;
+    }
+}
+@media (max-width: 540px) {
+    .videos {
+        top: 50%;
+        left: 50%;
+        transform: translate(-52%, -50%);
+        height: 400px;
+        width: 200px;
+    }
+    .videos iframe {
+        width: 180px;
+        height: 400px;
+    }
+    .bar {
+        transform: translate(230%, -50%);
+        padding: 3px;
+        font-size: medium;
+    }
+    .nav-bar ul {
+        display: flex;
+        gap: 1.5rem;
+        margin-top: 5px;
+        margin-left: 2px;
+    }
+    .nav-bar ul li {
+        font-size: 12px;
+    }
+}
